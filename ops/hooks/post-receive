@@ -2,7 +2,7 @@
 set -eu
 
 REPO_DIR=/srv/git/office24-7.tilda.git
-SITE_DIR=/srv/www/site.office24-7.ru
+SITE_DIR=/srv/www/office24-7.ru
 RELEASES_DIR="$SITE_DIR/releases"
 CURRENT_LINK="$SITE_DIR/current"
 

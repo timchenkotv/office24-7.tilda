@@ -1,0 +1,203 @@
+{
+  "summary": {
+    "sitemap_pages": 209,
+    "robots_sitemaps": 3,
+    "seo_blockers": 0,
+    "seo_warnings": 7,
+    "duplicate_titles": 6,
+    "duplicate_descriptions": 28
+  },
+  "blockers": [],
+  "warnings": [
+    {
+      "type": "missing description",
+      "url": "https://office24-7.ru/coach_trainer"
+    },
+    {
+      "type": "missing description",
+      "url": "https://office24-7.ru/news"
+    },
+    {
+      "type": "missing description",
+      "url": "https://office24-7.ru/page16748720.html"
+    },
+    {
+      "type": "missing description",
+      "url": "https://office24-7.ru/page19960964.html"
+    },
+    {
+      "type": "missing description",
+      "url": "https://office24-7.ru/rent_of_a_legal_address_in_moscow"
+    },
+    {
+      "type": "missing description",
+      "url": "https://office24-7.ru/rent_of_a_legal_address_in_moscow_"
+    },
+    {
+      "type": "missing description",
+      "url": "https://office24-7.ru/text_operator"
+    }
+  ],
+  "duplicate_titles": {
+    "Рабочие места в готовом совместном офисе Москва-Сити": [
+      "https://office24-7.ru/arendarabochegomesta",
+      "https://office24-7.ru/page15995688.html"
+    ],
+    "Аренда переговорных комнат и офисов на час в Москва-Сити": [
+      "https://office24-7.ru/meeting_room_in_moscow",
+      "https://office24-7.ru/nrm",
+      "https://office24-7.ru/peregovornaya"
+    ],
+    "Blank page": [
+      "https://office24-7.ru/page16748720.html",
+      "https://office24-7.ru/text_operator"
+    ],
+    "Универсальная страница компании": [
+      "https://office24-7.ru/page6060076.html",
+      "https://office24-7.ru/page6062086.html",
+      "https://office24-7.ru/page6062149.html"
+    ],
+    "Парковка в Москва-Сити для вас и ваших коллег": [
+      "https://office24-7.ru/page7436961.html",
+      "https://office24-7.ru/parking_moskow_sity"
+    ],
+    "Мини офисы в Москва-Сити с панорамными окнами.": [
+      "https://office24-7.ru/smart_office_in_moscow",
+      "https://office24-7.ru/smart_office_old"
+    ]
+  },
+  "duplicate_descriptions": {
+    "Аренда виртуального сервера позволяет Вам не только сэкономить на размещении инфраструктуры, но и оформлять лицензии на основные конфигурации 1С и Microsoft Office.": [
+      "https://office24-7.ru/1c_medium_business",
+      "https://office24-7.ru/1c_small_business",
+      "https://office24-7.ru/1c_start"
+    ],
+    "Можете ознакомиться как подробно пройти в бизнес-коворкинг по типу совместного офиса в Москва-Сити": [
+      "https://office24-7.ru/about",
+      "https://office24-7.ru/page7546971.html"
+    ],
+    "Офис 24/7 - коворкинг бизнес-класса для работы, деловых встреч и мероприятий. Офис 24/7 - это 200 квадратных метров площади, 50 рабочих мест и более 10 000 довольных резидентов.": [
+      "https://office24-7.ru/about_company",
+      "https://office24-7.ru/news_office24-7"
+    ],
+    "Для оптимизации затрат на ИТ-обслуживание мы предлагаем бесплатный предварительный экспресс-аудит ИТ-структуры Вашего предприятия с выездом нашего специалиста, после которого Вы сможете получить наиболее выгодное для Вас предложение !": [
+      "https://office24-7.ru/all_inclusive_it",
+      "https://office24-7.ru/it_all_inclusive",
+      "https://office24-7.ru/it_base",
+      "https://office24-7.ru/it_elementary",
+      "https://office24-7.ru/it_expert",
+      "https://office24-7.ru/it_leading",
+      "https://office24-7.ru/it_professional",
+      "https://office24-7.ru/it_remote",
+      "https://office24-7.ru/universal_it"
+    ],
+    "Предоставление аренды рабочих мест в Коворкинге 24/7. Переговорная, секретарская поддержка, интернет принтер, сканер, чай, кофе включено.": [
+      "https://office24-7.ru/arendarabochegomesta",
+      "https://office24-7.ru/page15995688.html"
+    ],
+    "Рабочие места улучшенной планировки в аренду - видовая локация в Москва-Сити, когда закрепленные офисные рабочие места находятся у окна с великолепным панорамным видом на Москву. Для тех, кому энергия успешного города важна для достижения собственных результатов.": [
+      "https://office24-7.ru/fixed_workplace",
+      "https://office24-7.ru/fixed_workplace_for_10_days",
+      "https://office24-7.ru/fixed_workplace_for_10_days_during_the_month",
+      "https://office24-7.ru/workplace_plus"
+    ],
+    "В рамках обслуживания осуществляется устранение любых неисправностей сетевого оборудования.": [
+      "https://office24-7.ru/internet_access_administration",
+      "https://office24-7.ru/network_availability"
+    ],
+    "Предоставление переговорной или офиса на час где секретарская поддержка, интернет принтер, сканер, чай, кофе включено.": [
+      "https://office24-7.ru/meeting_room_in_moscow",
+      "https://office24-7.ru/nrm",
+      "https://office24-7.ru/peregovornaya"
+    ],
+    "Эта система поможет начать зарабатывать в интернете. Есть сайт и поддержка дружной команды. Научись зарабатывать на своем компьютере. Есть пошаговая инструкция с чего начать. Удаленная работа в сети. Работа в интернете. Зарабатывайте намного больше в двое, в трое, а то и выше раз. Вы будете очень мало уделять этому времени, ведите бизнес когда вам удобно.": [
+      "https://office24-7.ru/money_internet_speed",
+      "https://office24-7.ru/strategy"
+    ],
+    "Предоставление переговорной на год 30 часов где секретарская поддержка, интернет принтер, сканер, чай, кофе включено.": [
+      "https://office24-7.ru/negotiation_room_sub_30h",
+      "https://office24-7.ru/ngr30h"
+    ],
+    "Предоставление переговорной в аренду на час где есть секретарская поддержка, интернет WiFi, цветная печать, сканер, проектор или презентационный монитор, чай, кофе включено.": [
+      "https://office24-7.ru/negotiation_rooms_12",
+      "https://office24-7.ru/negotiation_rooms_15",
+      "https://office24-7.ru/negotiation_rooms_18",
+      "https://office24-7.ru/negotiation_rooms_20",
+      "https://office24-7.ru/negotiation_rooms_9"
+    ],
+    "Наши залы оборудованы по последнему слову техники для проведения мероприятий любых форматов.Персональный менеджер сопровождает Вас от получения заявки и до ухода последнего гостя. Встреча гостей, заказ кейтеринга, оформление помещения - это и многое другое мы готовы взять на себя.": [
+      "https://office24-7.ru/openspace",
+      "https://office24-7.ru/organization_seminars"
+    ],
+    "Мы - коворкинг «Офис 24/7» в Москва-Сити. Предоставляем в аренду просторный и уютный офис с завораживающим видом на Москву, который открывается с 28-го этажа на Кутузовский проспект.": [
+      "https://office24-7.ru/page13755218.html",
+      "https://office24-7.ru/shooting"
+    ],
+    "Шаблон бизнес лендинга": [
+      "https://office24-7.ru/page5437974.html",
+      "https://office24-7.ru/page6221165.html"
+    ],
+    "Шаблон универсальной бизнес старницы": [
+      "https://office24-7.ru/page6060076.html",
+      "https://office24-7.ru/page6062086.html",
+      "https://office24-7.ru/page6062149.html"
+    ],
+    "Предоставление доступа в переговорную комнату по предварительной брони до 20 персон. Секретарская поддержка, чай-кофе, канцелярия, интернет WiFi.": [
+      "https://office24-7.ru/price_coworking/tproduct/192468510-132925938531-arenda-konferents-zala-3-na-chas-do-20-p",
+      "https://office24-7.ru/price_coworking/tproduct/192468510-329450489631-arenda-konferents-zala-1-na-chas-do-20-p",
+      "https://office24-7.ru/price_coworking/tproduct/192468510-833869575441-arenda-bolshogo-zala-4-na-chas-do-20-per"
+    ],
+    "Предоставление доступа в переговорную комнату по предварительной брони до 16 персон. Секретарская поддержка, чай-кофе, канцелярия, интернет WiFi.": [
+      "https://office24-7.ru/price_coworking/tproduct/192468510-156904279681-arenda-bolshogo-zala-4-na-chas-do-16-per",
+      "https://office24-7.ru/price_coworking/tproduct/192468510-762100119721-arenda-konferents-zala-2-na-chas-do-16-p",
+      "https://office24-7.ru/price_coworking/tproduct/192468510-921934910741-arenda-konferents-zala-3-na-chas-do-16-p"
+    ],
+    "Предоставление доступа в переговорную комнату по предварительной брони до 10 персон. Секретарская поддержка, чай-кофе, канцелярия, интернет WiFi.": [
+      "https://office24-7.ru/price_coworking/tproduct/192468510-213994904751-arenda-konferents-zala-1-na-chas-do-10-p",
+      "https://office24-7.ru/price_coworking/tproduct/192468510-409018440581-arenda-bolshogo-zala-4-na-chas-do-10-kre"
+    ],
+    "Предоставление доступа в переговорную комнату по предварительной брони до 8 персон. Секретарская поддержка, чай-кофе, канцелярия, интернет WiFi.": [
+      "https://office24-7.ru/price_coworking/tproduct/192468510-414842129851-arenda-bolshogo-zala-4-na-chas-do-8-kres",
+      "https://office24-7.ru/price_coworking/tproduct/192468510-600352218531-arenda-konferents-zala-1-na-chas-do-8-pe"
+    ],
+    "Предоставление доступа в переговорную комнату по предварительной брони до 18 персон. Секретарская поддержка, чай-кофе, канцелярия, интернет WiFi.": [
+      "https://office24-7.ru/price_coworking/tproduct/192468510-457306753501-arenda-konferents-zala-3-na-chas-do-18-p",
+      "https://office24-7.ru/price_coworking/tproduct/192468510-753949978931-arenda-konferents-zala-2-na-chas-do-18-p"
+    ],
+    "Предоставление доступа в переговорную комнату по предварительной брони до 30 персон. Секретарская поддержка, чай-кофе, канцелярия, интернет WiFi.": [
+      "https://office24-7.ru/price_coworking/tproduct/192468510-536824760911-arenda-konferents-zala-2-na-chas-do-30-p",
+      "https://office24-7.ru/price_coworking/tproduct/192468510-929264120011-arenda-konferents-zala-3-na-chas-do-30-p"
+    ],
+    "Предоставляем персонального помощника - секретаря. Это удаленная ассистентская работа которая позволит решить Вам множество рутинных бизнес задач: прием и обработка звонков, разбор и ответ на электронную почту, исполнение различных поручений, работа с напоминаниями.": [
+      "https://office24-7.ru/remote_secretary_assistant_12",
+      "https://office24-7.ru/remote_secretary_assistant_20",
+      "https://office24-7.ru/remote_secretary_assistant_3",
+      "https://office24-7.ru/remote_secretary_assistant_5",
+      "https://office24-7.ru/remote_secretary_assistant_8"
+    ],
+    "Рабочий стол Microsoft RDP Windows со стандартным офисным пакетом программ MS Office Standart, WinRAR, PDF, антивирус и FireWall": [
+      "https://office24-7.ru/rent_msrdp_w3_office",
+      "https://office24-7.ru/rent_msrdp_w5_office"
+    ],
+    "Предоставление готовых рабочих мест для бизнеса в коворкинге 24/7 делового центра. Переговорная, секретарская поддержка, интернет принтер, сканер, чай, кофе включено.": [
+      "https://office24-7.ru/rent_of_a_workplace",
+      "https://office24-7.ru/test"
+    ],
+    "Любой современный бизнесмен мечтает об офисе в Москва-Сити. Возьмите в аренду уютное помещение в башне \"Федерация\" Восток и воплотите мечту в реальность. Панорамные окна, секретарская поддержка, ресепшен - все это и многое другое подчеркнет престиж и статус Вашей компании.": [
+      "https://office24-7.ru/smart_expert",
+      "https://office24-7.ru/smart_professional"
+    ],
+    "Аренда готовых смарт-офисов для бизнеса с переговорной комнатой, секретарской поддержкой, принтером - сканером, канцелярией и интернетом под ключ": [
+      "https://office24-7.ru/smart_office_in_moscow",
+      "https://office24-7.ru/smart_office_old"
+    ],
+    "Функциональная специализация - каждый консультант по подбору персонала работает с определенным сектором и уровнем позиций, обладая фактическим опытом работы от 5 лет в соответствующей сфере.": [
+      "https://office24-7.ru/specialist",
+      "https://office24-7.ru/top_personal"
+    ],
+    "Спасибо за доверие": [
+      "https://office24-7.ru/thank_you_for_your_trust",
+      "https://office24-7.ru/unsubscribe_from_mailings"
+    ]
+  }
+}

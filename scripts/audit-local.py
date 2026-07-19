@@ -102,7 +102,7 @@ def main():
         web_path = "/" + html_file.relative_to(root).as_posix()
         if web_path.endswith("/index.html"):
             web_path = web_path[: -len("index.html")]
-        page_url = "https://site.office24-7.ru" + web_path
+        page_url = "https://office24-7.ru" + web_path
 
         refs = list(parser_obj.refs)
         for css in parser_obj.inline_css:
@@ -124,7 +124,7 @@ def main():
     for css_file in root.rglob("*.css"):
         text = css_file.read_text("utf-8", errors="replace")
         web_path = "/" + css_file.relative_to(root).as_posix()
-        base_url = "https://site.office24-7.ru" + web_path
+        base_url = "https://office24-7.ru" + web_path
         for ref in CSS_URL_RE.findall(text):
             reference_count += 1
             parsed = urlsplit(ref)

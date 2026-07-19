@@ -357,7 +357,11 @@ sub enqueue_asset {
 }
 
 sub load_sitemaps {
-  my @sm_q = ('https://office24-7.ru/sitemap.xml');
+  my @sm_q = (
+    'https://office24-7.ru/sitemap.xml',
+    'https://office24-7.ru/sitemap-store.xml',
+    'https://office24-7.ru/sitemap-feeds.xml',
+  );
   my %sm_seen;
 
   while (@sm_q) {

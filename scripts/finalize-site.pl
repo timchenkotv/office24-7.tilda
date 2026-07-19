@@ -84,6 +84,9 @@ for my $path (@html_files) {
   $html =~ s{/(_external/static\.tildacdn\.com/38af5ec3-9816-4508-bfa4-42b757792179/photo1442406964439e46ab8eff7c4)/}{/$1}g;
   $html =~ s{(/_external/static\.tildacdn\.com/js/tilda-(?:forms|cart)-1\.0\.min\.js)(?:\?local=\d+)?}{$1?local=20260719}g;
   $html =~ s{<script\b[^>]*>\s*if \(! window\.mainTracker\)(?:(?!</script>).)*</script>}{}gsi;
+  $html =~ s{(<link\b[^>]*\brel=["']canonical["'][^>]*\bhref=["'])/}{$1https://office24-7.ru/}gsi;
+  $html =~ s{(<meta\b[^>]*\bproperty=["']og:url["'][^>]*\bcontent=["'])/}{$1https://office24-7.ru/}gsi;
+  $html =~ s{(<meta\b[^>]*\bproperty=["']og:image["'][^>]*\bcontent=["'])/}{$1https://office24-7.ru/}gsi;
   write_file($path, $html);
 }
 
