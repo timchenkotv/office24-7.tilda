@@ -3,15 +3,17 @@
     "html_files": 245,
     "sitemap_pages": 209,
     "missing_sitemap_pages": 0,
-    "references_checked": 28473,
+    "references_checked": 28292,
     "missing_local_references": 0,
     "remote_tilda_resources": 0,
+    "tilda_fallback_scripts": 0,
     "pages_with_forms": 206,
     "forms_without_guard": 0
   },
   "missing_sitemap_pages": [],
   "missing_local_references": [],
   "remote_tilda_resources": [],
+  "tilda_fallback_scripts": [],
   "forms_without_guard": [],
   "external_hosts": {
     "office24-7.ru": 422,

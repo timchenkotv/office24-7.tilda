@@ -89,9 +89,12 @@ def main():
     html_files = sorted(root.rglob("*.html"))
     pages_with_forms = 0
     forms_without_guard = []
+    tilda_fallback_scripts = []
 
     for html_file in html_files:
         text = html_file.read_text("utf-8", errors="replace")
+        if re.search(r"tilda-fallback(?:-advanced)?-1\.0\.min\.js", text, re.I):
+            tilda_fallback_scripts.append(str(html_file))
         parser_obj = RefParser()
         parser_obj.feed(text)
         if parser_obj.forms:
@@ -159,18 +162,20 @@ def main():
             "references_checked": reference_count,
             "missing_local_references": len(unique_missing),
             "remote_tilda_resources": len(remote_tilda_resources),
+            "tilda_fallback_scripts": len(tilda_fallback_scripts),
             "pages_with_forms": pages_with_forms,
             "forms_without_guard": len(forms_without_guard),
         },
         "missing_sitemap_pages": missing_sitemap_pages,
         "missing_local_references": unique_missing,
         "remote_tilda_resources": remote_tilda_resources,
+        "tilda_fallback_scripts": tilda_fallback_scripts,
         "forms_without_guard": forms_without_guard,
         "external_hosts": dict(external_hosts.most_common()),
     }
     Path(args.output).write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n")
     print(json.dumps(result["summary"], ensure_ascii=False, indent=2))
-    if missing_sitemap_pages or unique_missing or remote_tilda_resources or forms_without_guard:
+    if missing_sitemap_pages or unique_missing or remote_tilda_resources or tilda_fallback_scripts or forms_without_guard:
         raise SystemExit(1)
 
 

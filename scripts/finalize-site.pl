@@ -80,6 +80,9 @@ find(
 for my $path (@html_files) {
   my $html = slurp($path);
   $html =~ s{<link\b[^>]*\brel=(["'])(?:dns-prefetch|preconnect)\1[^>]*>}{}gsi;
+  # The fallback bundle rewrites failed local URLs back to Tilda's CDN. A
+  # self-contained archive must keep failures local rather than revive Tilda.
+  $html =~ s{<script\b[^>]*\bsrc=(["'])[^"']*tilda-fallback(?:-advanced)?-1\.0\.min\.js[^"']*\1[^>]*>\s*</script>}{}gsi;
   $html =~ s{(\bcontent=["'][^"']+\.(?:jpe?g|png|webp|gif|svg))\}}{$1}gsi;
   $html =~ s{/(_external/static\.tildacdn\.com/38af5ec3-9816-4508-bfa4-42b757792179/photo1442406964439e46ab8eff7c4)/}{/$1}g;
   $html =~ s{(/_external/static\.tildacdn\.com/js/tilda-(?:forms|cart)-1\.0\.min\.js)(?:\?local=\d+)?}{$1?local=20260719}g;
