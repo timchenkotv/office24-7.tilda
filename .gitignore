@@ -1,6 +1,7 @@
 .DS_Store
 __pycache__/
 *.pyc
+/.mirror-work/
 /.attempt-1-www/
 /.attempt-1-reports/
 /fresh-export-v2/
