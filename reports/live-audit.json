@@ -1,0 +1,13 @@
+{
+  "summary": {
+    "sitemap_pages": 180,
+    "live_pages_fetched": 180,
+    "live_page_fetch_errors": 0,
+    "live_assets_discovered": 1140,
+    "missing_local_assets": 0,
+    "page_structure_mismatches": 0
+  },
+  "live_page_fetch_errors": [],
+  "missing_local_assets": [],
+  "page_structure_mismatches": []
+}

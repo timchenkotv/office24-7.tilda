@@ -1,0 +1,25 @@
+User-Agent: *
+Disallow: /page2195767.html
+Disallow: /footer
+Disallow: /page3119978.html
+Disallow: /menu
+Disallow: /page22313582.html
+Disallow: /conference_rooms
+Disallow: /tilda/form*
+Disallow: /tilda/rec*
+Disallow: /tilda/click*
+Disallow: /tilda/scroll*
+Disallow: /tilda/popup*
+Disallow: /tilda/cart*
+Disallow: /tilda/product*
+Disallow: /tilda/event*
+Disallow: /*_escaped_fragment_*
+Disallow: /members/login*
+Disallow: /members/signup*
+Disallow:
+
+
+Sitemap: https://office24-7.ru/sitemap.xml
+Sitemap: https://office24-7.ru/sitemap-store.xml
+Sitemap: https://office24-7.ru/sitemap-feeds.xml
+Host: https://office24-7.ru

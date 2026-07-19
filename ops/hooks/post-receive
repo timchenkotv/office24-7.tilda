@@ -1,0 +1,26 @@
+#!/bin/sh
+set -eu
+
+REPO_DIR=/srv/git/office24-7.tilda.git
+SITE_DIR=/srv/www/site.office24-7.ru
+RELEASES_DIR="$SITE_DIR/releases"
+CURRENT_LINK="$SITE_DIR/current"
+
+while read -r old_revision new_revision ref_name; do
+    [ "$ref_name" = "refs/heads/main" ] || continue
+
+    release_id="$(date -u +%Y%m%dT%H%M%SZ)-$(printf '%s' "$new_revision" | cut -c1-12)"
+    release_dir="$RELEASES_DIR/$release_id"
+    mkdir -p "$release_dir"
+
+    git --git-dir="$REPO_DIR" archive "$new_revision" www | tar -x -C "$release_dir"
+    test -f "$release_dir/www/index.html"
+
+    ln -sfn "$release_dir" "$CURRENT_LINK.new"
+    mv -Tf "$CURRENT_LINK.new" "$CURRENT_LINK"
+
+    find "$RELEASES_DIR" -mindepth 1 -maxdepth 1 -type d -printf '%T@ %p\n' \
+        | sort -nr \
+        | awk 'NR > 5 {sub(/^[^ ]+ /, ""); print}' \
+        | xargs -r rm -rf
+done

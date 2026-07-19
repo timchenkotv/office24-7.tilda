@@ -1,0 +1,11 @@
+.DS_Store
+__pycache__/
+*.pyc
+/.attempt-1-www/
+/.attempt-1-reports/
+/fresh-export-v2/
+/site-mirror-office/
+/site-mirror-office-v2/
+/mirror-site.pl
+/mirror-site-office-full.pl
+/README_LOCAL_MIRROR.md
