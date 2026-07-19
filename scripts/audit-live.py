@@ -21,6 +21,12 @@ RESOURCE_ATTRS = {
 }
 CSS_URL_RE = re.compile(r"url\(\s*['\"]?([^)'\"\s]+)", re.I)
 ABSOLUTE_URL_RE = re.compile(r"https?://[^\s\"'<>\\]+", re.I)
+SCRIPT_TAG_RE = re.compile(r"<script\b", re.I)
+FORM_GUARD_RE = re.compile(r'<script\b[^>]*\bid=["\']office24-static-form-guard["\']', re.I)
+TILDA_STAT_RE = re.compile(
+    r"<script\b[^>]*>\s*if \(! window\.mainTracker\)(?:(?!</script>).)*</script>",
+    re.I | re.S,
+)
 
 
 def allowed_asset_host(host):
@@ -151,7 +157,16 @@ def parse_local(path):
     text = path.read_text("utf-8", errors="replace")
     parser = LiveParser()
     parser.feed(text)
-    return parser
+    return parser, text
+
+
+def functional_script_count(text):
+    """Ignore the local form guard and the removed Tilda telemetry loader."""
+    return (
+        len(SCRIPT_TAG_RE.findall(text))
+        - len(FORM_GUARD_RE.findall(text))
+        - len(TILDA_STAT_RE.findall(text))
+    )
 
 
 def main():
@@ -191,13 +206,15 @@ def main():
         if not local_path.exists():
             structure_mismatches.append({"url": url, "reason": "missing local page"})
             continue
-        local = parse_local(local_path)
+        local, local_text = parse_local(local_path)
         if live.title != local.title:
             structure_mismatches.append({"url": url, "reason": "title differs", "live": live.title, "local": local.title})
         if live.record_count != local.record_count:
             structure_mismatches.append({"url": url, "reason": "Tilda block count differs", "live": live.record_count, "local": local.record_count})
-        if live.script_count != local.script_count - 1:
-            structure_mismatches.append({"url": url, "reason": "script count differs beyond local form guard", "live": live.script_count, "local": local.script_count})
+        live_scripts = functional_script_count(text)
+        local_scripts = functional_script_count(local_text)
+        if live_scripts != local_scripts:
+            structure_mismatches.append({"url": url, "reason": "functional script count differs", "live": live_scripts, "local": local_scripts})
 
         for asset in extract_live_assets(url, text, live):
             discovered_assets.add(asset)
