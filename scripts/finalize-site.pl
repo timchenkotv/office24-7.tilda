@@ -106,6 +106,28 @@ if (-f $feed_js) {
   write_file($feed_js, $js);
 }
 
+# Tilda's local form and cart bundles dynamically inject these helpers. Keep
+# those late-loaded scripts on the archived origin as well.
+my %dynamic_script_rewrites = (
+  "$root/_external/static.tildacdn.com/js/tilda-forms-1.0.min.js" => [
+    ['"https://static.tildacdn."+t_forms__getRootZone()+"/js/"+s+".min.js"', '"/_external/static.tildacdn.com/js/"+s+".min.js"'],
+    ['"https://static.tildacdn."+t_forms__getRootZone()+"/js/tilda-forms-custommask-1.0.min.js"', '"/_external/static.tildacdn.com/js/tilda-forms-custommask-1.0.min.js"'],
+  ],
+  "$root/_external/static.tildacdn.com/js/tilda-cart-1.0.min.js" => [
+    ['"https://static.tildacdn."+tcart__getRootZone()+"/js/tilda-widget-positions-1.0.min.js"', '"/_external/static.tildacdn.com/js/tilda-widget-positions-1.0.min.js"'],
+  ],
+);
+
+for my $path (sort keys %dynamic_script_rewrites) {
+  next unless -f $path;
+  my $js = slurp($path);
+  for my $rewrite (@{$dynamic_script_rewrites{$path}}) {
+    my ($from, $to) = @{$rewrite};
+    $js =~ s/\Q$from\E/$to/g;
+  }
+  write_file($path, $js);
+}
+
 my $report = "route\ttarget\n";
 $report .= "$_\t$aliases{$_}\n" for sort keys %aliases;
 write_file('reports/aliases.tsv', $report);
