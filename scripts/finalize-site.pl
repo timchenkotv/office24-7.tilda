@@ -82,6 +82,7 @@ for my $path (@html_files) {
   $html =~ s{<link\b[^>]*\brel=(["'])(?:dns-prefetch|preconnect)\1[^>]*>}{}gsi;
   $html =~ s{(\bcontent=["'][^"']+\.(?:jpe?g|png|webp|gif|svg))\}}{$1}gsi;
   $html =~ s{/(_external/static\.tildacdn\.com/38af5ec3-9816-4508-bfa4-42b757792179/photo1442406964439e46ab8eff7c4)/}{/$1}g;
+  $html =~ s{(/_external/static\.tildacdn\.com/js/tilda-(?:forms|cart)-1\.0\.min\.js)(?:\?local=\d+)?}{$1?local=20260719}g;
   write_file($path, $html);
 }
 
