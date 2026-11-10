@@ -17,6 +17,10 @@ All further development and testing of `office24-7.ru` must happen on `wlab`, no
 - Production remote: `ssh://root@tilda-sites/srv/git/office24-7.tilda.git`
 - Production VM alias on wlab: `tilda-sites` (`172.16.7.40`)
 
+## Migration receipt
+
+The Mac source and the first complete wlab copy were compared before any wlab-only Git changes: 9,182 regular files, 1,040,627,077 bytes, identical HEAD `6882f96b4908dba2cc23ca8b8e984ea773a73ffd`, clean `git fsck`, and zero content differences from `rsync -rcin --delete`. Nothing was deleted from the Mac. macOS generated 13,233 AppleDouble transport files (`._*`); they were moved outside the project without deletion to `/srv/wlab/projects/.migration-artifacts/office24-7-macos-appledouble-20261110`.
+
 ## What this project is
 
 This is a self-contained static archive of the former Tilda site. It is not a redesign. Pages, images, icons, CSS, JavaScript, products, news posts, feeds, and compatibility routes were downloaded and localized so the public site does not need Tilda to render.
@@ -89,6 +93,8 @@ On 2026-08-31 an instruction about adding fixed-ruble daily penalty modes to `ca
 ## Git topology
 
 The repository copied from Mac initially had local branch `codex/office24-export`, while both GitHub and VM240 used `main`. During the wlab migration the local branch is normalized to `main` and set to track `vm240/main`. VM240 upload and receive packs run as `queen` through the existing VM-specific wlab key. Direct GitHub SSH authentication is intentionally not required on wlab: production VM240 already owns a repository-specific GitHub deploy key.
+
+The local `.git/config` intentionally sets `remote.vm240.uploadpack` to `sudo -u queen git-upload-pack` and `remote.vm240.receivepack` to `sudo -u queen git-receive-pack`. This keeps Git objects and deployment hooks owned by `queen` without adding another permanent SSH authorization. Do not remove these settings.
 
 Normal deployment flow:
 
