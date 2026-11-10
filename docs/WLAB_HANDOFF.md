@@ -84,7 +84,7 @@ Production checks on 2026-11-10 returned `200` for the home page, `/about`, `/pr
 
 ## Git topology
 
-The repository copied from Mac initially had local branch `codex/office24-export`, while both GitHub and VM240 used `main`. During the wlab migration the local branch is normalized to `main` and set to track the GitHub branch metadata. Direct GitHub SSH authentication is intentionally not required on wlab: production VM240 already owns a repository-specific GitHub deploy key.
+The repository copied from Mac initially had local branch `codex/office24-export`, while both GitHub and VM240 used `main`. During the wlab migration the local branch is normalized to `main` and set to track `vm240/main`. VM240 upload and receive packs run as `queen` through the existing VM-specific wlab key. Direct GitHub SSH authentication is intentionally not required on wlab: production VM240 already owns a repository-specific GitHub deploy key.
 
 Normal deployment flow:
 
