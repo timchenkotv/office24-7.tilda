@@ -68,6 +68,10 @@ The seven SEO description warnings and duplicate metadata are inherited content-
 
 Production checks on 2026-11-10 returned `200` for the home page, `/about`, `/price_coworking_rent`, and a representative `/tpost/...` page. `robots.txt` referenced all three top-level sitemaps.
 
+## Explicitly excluded aborted request
+
+On 2026-08-31 an instruction about adding fixed-ruble daily penalty modes to `calc_NST` was mistakenly sent in the Office24 project. Investigation found that `calc_NST` belongs to the separate `elegso.tilda` project. The owner stopped that task immediately. No Office24 files, databases, or production services were changed for it. Never implement or carry that request into this repository.
+
 ## Important files
 
 - `www/`: deployable static site
