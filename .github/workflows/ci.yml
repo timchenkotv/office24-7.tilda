@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - "codex/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  static-site:
+    runs-on: [self-hosted, Linux, X64, wlab-ci, office247-ci]
+    timeout-minutes: 30
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          clean: true
+          fetch-depth: 1
+          persist-credentials: false
+      - name: Verify static archive
+        run: |
+          python3 scripts/audit-local.py
+          python3 scripts/audit-seo.py
+          git diff --check
+          test -f www/index.html
+          test -f www/robots.txt
+          test -f www/sitemap.xml
+          test -f www/sitemap-store.xml
+          test -f www/sitemap-feeds.xml
